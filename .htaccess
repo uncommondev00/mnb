@@ -1,0 +1,11 @@
+
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<Limit GET POST PUT OPTIONS DELETE PATCH HEAD>
+    Require all granted
+</Limit>
